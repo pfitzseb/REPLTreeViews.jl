@@ -1,0 +1,6 @@
+authors = ["Sebastian Pfitzner <pfitzseb@physik.hu-berlin.de>"]
+name = "REPLTreeViews"
+uuid = "d9daf69e-8bf9-11e8-2917-11aa663f5862"
+version = "0.1.0"
+
+[deps]
