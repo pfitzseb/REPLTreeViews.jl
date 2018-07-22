@@ -1,7 +1,7 @@
 module REPLTreeViews
 
-import TreeViews
+using TreeViews: numberofnodes, treelabel, treenode, hastreeview
 
-include(renderer.jl)
+include("renderer.jl")
 
 end # module
