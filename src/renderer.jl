@@ -5,13 +5,6 @@ using REPL
 
 include("utils.jl")
 
-terminal = nothing  # The user terminal
-
-function __init__()
-    global terminal
-    terminal = REPL.Terminals.TTYTerminal(get(ENV, "TERM", Sys.iswindows() ? "" : "dumb"), stdin, stdout, stderr)
-end
-
 export @ishow
 
 mutable struct Tree{F}
@@ -84,7 +77,7 @@ function generateTreeView(x)
       for i in 1:numberofnodes(x)
         node = treenode(x, i)
 
-        cheader = sprint(treelabel, x, i, MIME"text/plain"())
+        cheader = sprint(nodelabel, x, i, MIME"text/plain"())
         if isempty(cheader)
           push!(children, hastreeview(node) ? generateTreeView(node) : node)
         elseif node === nothing
