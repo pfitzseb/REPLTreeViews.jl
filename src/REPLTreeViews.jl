@@ -23,5 +23,6 @@ function __init__()
 end
 
 include("renderer.jl")
+include("default.jl")
 
 end # module
